@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ayşe için Rapunzel temalı doğum günü sitesi"
+    />
+    <title>Ayşe'nin Doğum Günü Masalı</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="stars"></div>
+      <div class="lantern-field" data-layer="back"></div>
+      <div class="balloon-field"></div>
+      <div class="lily-field"></div>
+    </div>
+
+    <section class="lock-screen" id="lockScreen" aria-label="Şifre ekranı">
+      <div class="lock-orbit" aria-hidden="true"></div>
+      <div class="tower-gate" id="towerGate" aria-hidden="true">
+        <div class="tower-roof"></div>
+        <div class="tower-window">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="golden-hair hair-one"></div>
+        <div class="golden-hair hair-two"></div>
+        <div class="tower-body">
+          <div class="door" id="towerDoor">
+            <div class="door-arch"></div>
+            <div class="door-lock"></div>
+          </div>
+        </div>
+        <div class="tower-base"></div>
+      </div>
+
+      <form class="pin-panel" id="pinForm" autocomplete="off">
+        <p class="eyebrow">Kule kapısı</p>
+        <h1>Ayşe'nin masalı</h1>
+        <p class="lock-copy">Kapı sadece doğru dört rakamla açılır.</p>
+
+        <label class="sr-only" for="pinInput">Şifre</label>
+        <input
+          id="pinInput"
+          name="pin"
+          type="password"
+          inputmode="numeric"
+          maxlength="4"
+          autocomplete="one-time-code"
+        />
+
+        <div class="pin-dots" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="keypad" aria-label="Şifre tuşları">
+          <button type="button" data-key="1">1</button>
+          <button type="button" data-key="2">2</button>
+          <button type="button" data-key="3">3</button>
+          <button type="button" data-key="4">4</button>
+          <button type="button" data-key="5">5</button>
+          <button type="button" data-key="6">6</button>
+          <button type="button" data-key="7">7</button>
+          <button type="button" data-key="8">8</button>
+          <button type="button" data-key="9">9</button>
+          <button type="button" data-action="clear">Sil</button>
+          <button type="button" data-key="0">0</button>
+          <button type="submit">Aç</button>
+        </div>
+
+        <p class="lock-message" id="lockMessage" role="status" aria-live="polite">
+          Kapı sessizce bekliyor.
+        </p>
+      </form>
+    </section>
+
+    <main class="site-content" id="siteContent" hidden>
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true"></span>
+        <span>Müzik</span>
+      </button>
+
+      <section class="hero section" id="top">
+        <div class="hero-lanterns" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero-tower parallax" data-speed="0.18" aria-hidden="true">
+          <div class="mini-roof"></div>
+          <div class="mini-window"></div>
+          <div class="mini-hair"></div>
+          <div class="mini-body"></div>
+        </div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">6 Haziran Cumartesi</p>
+          <h2>Ayşe</h2>
+          <p class="hero-line">İyi ki doğdun güzelim.</p>
+          <p>
+            Bugün bütün fenerler gökyüzüne senin için yükseliyor, bütün
+            zambaklar da en güzel halini sana saklıyor.
+          </p>
+          <a class="primary-link" href="#letter">Mektubu aç</a>
+        </div>
+      </section>
+
+      <section class="counter-ribbon section" aria-label="Gün sayacı">
+        <div class="counter-card reveal">
+          <span class="counter-label">Birlikte geçen gün</span>
+          <strong id="daysTogether">0</strong>
+        </div>
+        <div class="counter-card reveal">
+          <span class="counter-label">Doğum günü</span>
+          <strong id="birthdayCountdown">Cumartesi</strong>
+        </div>
+      </section>
+
+      <section class="letter-section section" id="letter">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Kulede saklanan mektup</p>
+          <h2>Ayşe'ye</h2>
+        </div>
+
+        <div class="envelope reveal" id="envelope">
+          <button class="envelope-button" id="openLetter" type="button">
+            <span class="flap"></span>
+            <span class="seal"></span>
+            <span class="envelope-front"></span>
+            <span class="letter-peek">Mektubu Aç</span>
+          </button>
+          <article class="letter-paper" aria-live="polite">
+            <h3>Canım Ayşe,</h3>
+            <p>
+              Sen hayatıma geldiğinden beri sıradan günlerin bile içinde küçük
+              bir ışık var. Gülüşün, sesin, en ufak heyecanın bile bana ev gibi
+              geliyor.
+            </p>
+            <p>
+              Bu sayfayı sana minik bir masal gibi bıraktım. Kapısı kule, yolu
+              fener, kokusu zambak olsun istedim. Çünkü senin yanında her şey
+              biraz daha büyülü.
+            </p>
+            <p class="signature">İyi ki varsın, iyi ki doğdun.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery-section section" id="gallery">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Anılar</p>
+          <h2>Polaroid köşesi</h2>
+        </div>
+        <div class="polaroid-grid">
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-1.jpg">
+              <span>Anı 1</span>
+            </div>
+            <figcaption>İlk gülüş</figcaption>
+          </figure>
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-2.jpg">
+              <span>Anı 2</span>
+            </div>
+            <figcaption>En sevdiğim bakış</figcaption>
+          </figure>
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-3.jpg">
+              <span>Anı 3</span>
+            </div>
+            <figcaption>Birlikte</figcaption>
+          </figure>
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-4.jpg">
+              <span>Anı 4</span>
+            </div>
+            <figcaption>Minik kaçamak</figcaption>
+          </figure>
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-5.jpg">
+              <span>Anı 5</span>
+            </div>
+            <figcaption>Güzel gün</figcaption>
+          </figure>
+          <figure class="polaroid reveal">
+            <div class="photo-slot" data-photo="assets/photos/photo-6.jpg">
+              <span>Anı 6</span>
+            </div>
+            <figcaption>Bizim masal</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="reasons-section section" id="reasons">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Seni neden seviyorum?</p>
+          <h2>Çünkü sen</h2>
+        </div>
+        <div class="reason-list">
+          <article class="reason reveal">
+            <span>01</span>
+            <p>Girdiğin her yeri daha sıcak, daha gerçek yapıyorsun.</p>
+          </article>
+          <article class="reason reveal">
+            <span>02</span>
+            <p>Gülünce sanki içimde bir yer ışık doluyor.</p>
+          </article>
+          <article class="reason reveal">
+            <span>03</span>
+            <p>İncecik düşüncelerinle sevgiyi hep hissettiriyorsun.</p>
+          </article>
+          <article class="reason reveal">
+            <span>04</span>
+            <p>Yanındayken zaman bile daha güzel akıyor.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="finale section">
+        <div class="finale-card reveal">
+        <div class="lily-bouquet" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+          <p class="eyebrow">Rapunzel fenerleri hazır</p>
+          <h2>Nice güzel yaşlarına, Ayşe.</h2>
+          <p>
+            Cumartesi kapı açıldığında bu küçük masal senin gününe eşlik etsin.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
