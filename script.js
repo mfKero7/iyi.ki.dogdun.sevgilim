@@ -291,7 +291,7 @@ function updateStaticTexts() {
   const heroSubtitle = document.querySelector(".hero-content p");
   if (heroSubtitle) heroSubtitle.textContent = CONFIG.subtitle;
 
-  document.title = `${CONFIG.name}'nin Masalı 💜`;
+  document.title = "İyi ki Doğdun Sevgilim 💜";
 }
 
 function setAudioSources() {
