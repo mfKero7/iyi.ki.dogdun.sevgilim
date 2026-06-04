@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2b124c" />
+  <meta name="description" content="Ayşe için Rapunzel ve zambak temalı romantik masal sitesi." />
+  <title>Ayşe'nin Masalı 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+
+  <main id="app" class="app is-locked">
+    <!-- PASSWORD / TOWER DOOR SCENE -->
+    <section id="gateScene" class="gate-scene scene active" aria-label="Rapunzel kule kapısı giriş ekranı">
+      <div class="stars-layer" aria-hidden="true"></div>
+      <div class="mist mist-a" aria-hidden="true"></div>
+      <div class="mist mist-b" aria-hidden="true"></div>
+      <div class="moon" aria-hidden="true"></div>
+
+      <div class="tower-wrap">
+        <div class="tower-top" aria-hidden="true">
+          <div class="roof"></div>
+          <div class="window-lit"></div>
+        </div>
+
+        <div class="tower-body">
+          <div class="ivy ivy-left" aria-hidden="true"></div>
+          <div class="ivy ivy-right" aria-hidden="true"></div>
+
+          <div class="tower-title-card glass-card">
+            <span class="mini-overline">gizli masal kapısı</span>
+            <h1>Ayşe'nin Kulesi</h1>
+            <p>Bu kapı sadece bizim masalımıza açılır.</p>
+          </div>
+
+          <div id="towerDoor" class="tower-door" aria-hidden="true">
+            <div class="door-light"></div>
+            <div class="door-panel door-left">
+              <span class="door-ornament top"></span>
+              <span class="door-ornament bottom"></span>
+            </div>
+            <div class="door-panel door-right">
+              <span class="door-ornament top"></span>
+              <span class="door-ornament bottom"></span>
+            </div>
+            <div class="door-arch"></div>
+            <div class="door-lock">✦</div>
+          </div>
+
+          <div class="keypad-card glass-card" role="group" aria-label="Şifre paneli">
+            <p class="keypad-label">Şifreyi gir</p>
+            <div id="passwordDots" class="password-dots" aria-live="polite">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="keypad-grid">
+              <button class="key-btn" data-key="1">1</button>
+              <button class="key-btn" data-key="2">2</button>
+              <button class="key-btn" data-key="3">3</button>
+              <button class="key-btn" data-key="4">4</button>
+              <button class="key-btn" data-key="5">5</button>
+              <button class="key-btn" data-key="6">6</button>
+              <button class="key-btn" data-key="7">7</button>
+              <button class="key-btn" data-key="8">8</button>
+              <button class="key-btn" data-key="9">9</button>
+              <button class="key-btn ghost" data-action="clear">sil</button>
+              <button class="key-btn" data-key="0">0</button>
+              <button class="key-btn gold" data-action="enter">aç</button>
+            </div>
+            <p id="passwordMessage" class="password-message" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gate-footer">
+        <span></span>
+        <p aria-hidden="true"></p>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- MAIN FAIRY TALE EXPERIENCE -->
+    <section id="mainExperience" class="main-experience" aria-label="Ayşe için hazırlanmış masal sitesi">
+      <div id="lanternField" class="lantern-field" aria-hidden="true"></div>
+      <div id="sparkleField" class="sparkle-field" aria-hidden="true"></div>
+      <div class="hair-ribbon" aria-hidden="true">
+        <div class="hair-strand strand-one"></div>
+        <div class="hair-strand strand-two"></div>
+        <div class="hair-braid">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hair-flower f1"></div>
+        <div class="hair-flower f2"></div>
+        <div class="hair-flower f3"></div>
+        <div class="hair-flower f4"></div>
+        <div class="hair-flower f5"></div>
+      </div>
+
+      <button id="musicToggle" class="music-toggle" type="button" aria-label="Müziği aç veya kapat">
+        <span class="music-icon">♪</span>
+        <span class="music-text">Müzik</span>
+      </button>
+
+      <audio id="backgroundMusic" loop preload="none">
+        <source src="assets/music/background.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="envelopeSound" preload="none">
+        <source src="assets/music/envelope.mp3" type="audio/mpeg" />
+      </audio>
+
+      <!-- HERO -->
+      <section class="hero scene-block" data-section="hero">
+        <div class="floating-lilies" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-content reveal-up">
+          <span class="mini-overline">bir Rapunzel masalı</span>
+          <h2>Ayşe'nin Masalı</h2>
+          <p>Bu sayfa sadece kalbimin prensesi için hazırlandı.</p>
+          <div class="hero-actions">
+            <a href="#letterSection" class="primary-link">Mektuba git</a>
+            <a href="#gallerySection" class="secondary-link">Anılarımıza bak</a>
+          </div>
+        </div>
+        <div class="hero-orb orb-left" aria-hidden="true"></div>
+        <div class="hero-orb orb-right" aria-hidden="true"></div>
+      </section>
+
+      <!-- LETTER / ENVELOPE -->
+      <section id="letterSection" class="letter-section scene-block">
+        <div class="section-heading reveal-up">
+          <span class="mini-overline">kalbimden gelen</span>
+          <h2>Sana Bir Mektup</h2>
+          <p>Zarfı açınca bu masalın en özel cümleleri ortaya çıkacak.</p>
+        </div>
+
+        <div class="envelope-stage reveal-up">
+          <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Mektubu aç">
+            <div class="envelope-shadow"></div>
+            <div class="paper">
+              <div class="paper-inner">
+                <span class="paper-kicker">Sevgili Ayşe,</span>
+                <p id="typedLetter" class="typed-letter"></p>
+              </div>
+            </div>
+            <div class="envelope-back"></div>
+            <div class="envelope-left"></div>
+            <div class="envelope-right"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <button id="openLetterBtn" class="open-letter-btn" type="button">Mektubu Aç</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTER -->
+      <section id="counterSection" class="counter-section scene-block">
+        <div class="counter-card glass-card reveal-up">
+          <span class="mini-overline">10.10.2025'ten beri</span>
+          <h2>Birlikte Geçen Günlerimiz</h2>
+          <div class="counter-main">
+            <strong id="daysTogether">0</strong>
+            <span>gün</span>
+          </div>
+          <div class="counter-grid">
+            <div><strong id="hoursTogether">00</strong><span>saat</span></div>
+            <div><strong id="minutesTogether">00</strong><span>dakika</span></div>
+            <div><strong id="secondsTogether">00</strong><span>saniye</span></div>
+          </div>
+          <p>Her geçen gün, masalımıza yeni bir fener daha ekleniyor.</p>
+        </div>
+      </section>
+
+      <!-- SINGLE PHOTO / SCRAPBOOK WALL -->
+      <section id="gallerySection" class="gallery-section scrapbook-section scene-block">
+        <div class="scrapbook-fade-in" aria-hidden="true"></div>
+        <div class="birthday-wall" aria-hidden="true">
+          <span>happy birthday</span><span>happy birthday</span><span>happy birthday</span>
+          <span>happy birthday</span><span>happy birthday</span><span>happy birthday</span>
+          <span>happy birthday</span><span>happy birthday</span><span>happy birthday</span>
+          <span>happy birthday</span><span>happy birthday</span><span>happy birthday</span>
+        </div>
+
+        <div class="section-heading scrapbook-heading reveal-up">
+          <span class="mini-overline">anı defterimiz</span>
+          <h2>Ayşe'nin Scrapbook Sayfası</h2>
+          <p>Bu küçük sayfada sadece bizim en özel karemiz ve kalbimden kısa bir not var.</p>
+        </div>
+
+        <div class="scrapbook-board reveal-up" aria-label="Ayşe için dağınık scrapbook panosu">
+          <div class="board-paper-lines" aria-hidden="true"></div>
+          <div class="board-soft-glow" aria-hidden="true"></div>
+
+          <div class="scrapbook-title sticker sticker-title">
+            <span>for my</span>
+            <strong>Birthday Girl</strong>
+          </div>
+
+          <div class="ribbon-sticker ribbon-one" aria-hidden="true">happy birthday</div>
+          <div class="ribbon-sticker ribbon-two" aria-hidden="true">happy birthday</div>
+          <div class="ribbon-sticker ribbon-three" aria-hidden="true">happy birthday</div>
+          <div class="ribbon-sticker ribbon-four" aria-hidden="true">happy birthday</div>
+
+          <div class="tape-strip tape-a" aria-hidden="true"></div>
+          <div class="tape-strip tape-b" aria-hidden="true"></div>
+          <div class="tape-strip tape-c" aria-hidden="true"></div>
+
+          <div class="sticker bow-sticker" aria-hidden="true">
+            <span></span><span></span><i></i>
+          </div>
+
+          <div class="sticker balloon-sticker balloon-left" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="sticker balloon-sticker balloon-right" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+
+          <div class="sticker lips-sticker" aria-hidden="true"></div>
+          <div class="sticker cake-sticker" aria-hidden="true">
+            <span class="candle"></span>
+            <span class="cake-top"></span>
+            <span class="cake-body"></span>
+          </div>
+
+          <div class="sticker lily-bouquet" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="spotify-card spotify-lyrics-card" aria-label="Spotify tarzı şarkı sözü kartı">
+            <img
+              id="spotifyReferenceImage"
+              class="spotify-reference-image"
+              src="assets/images/spotify-card.jpg"
+              alt="Kiss of Life Spotify şarkı sözü kartı"
+            />
+            <div class="spotify-generated-content">
+              <div class="spotify-header">
+                <div class="spotify-cover sade-cover" aria-hidden="true">
+                  <span>S</span>
+                </div>
+                <div class="spotify-info">
+                  <strong id="spotifySongTitle">Kiss of Life</strong>
+                  <small id="spotifySongArtist">Sade</small>
+                </div>
+              </div>
+              <p class="spotify-lyric-line">
+                <span>You gave me the kiss of life</span>
+                <span>Kiss of life</span>
+              </p>
+              <div class="spotify-bottom-row">
+                <span class="spotify-logo-dot">●</span>
+                <span class="spotify-word">Spotify</span>
+                <button id="spotifyMiniButton" class="spotify-mini-button" type="button" aria-label="Müziği aç">▶</button>
+              </div>
+            </div>
+          </div>
+
+          <figure class="real-cake-sticker" aria-label="Zambaklı doğum günü pastası">
+            <img src="assets/images/lily-cake.png" alt="Zambaklarla süslenmiş beyaz doğum günü pastası" />
+          </figure>
+
+          <div class="note-card darling-note">
+            <span>Darling,</span>
+            <p>you are my favorite chapter, my brightest lantern and my prettiest flower.</p>
+          </div>
+
+          <div class="mini-ticket ticket-one" aria-hidden="true">our little date</div>
+          <div class="mini-ticket ticket-two" aria-hidden="true">10.10.2025</div>
+
+          <div id="polaroidGrid" class="polaroid-grid scrapbook-polaroids" aria-label="Tek fotoğraflık scrapbook anısı"></div>
+        </div>
+      </section>
+
+      <!-- LOVE REASONS -->
+      <section id="reasonsSection" class="reasons-section scene-block">
+        <div class="section-heading reveal-up">
+          <span class="mini-overline">küçük ama gerçek sebepler</span>
+          <h2>Seni Sevmemin 75 Küçük Sebebi</h2>
+          <p>Her kart, kalbimde ayrı ayrı parlayan küçük bir fener gibi.</p>
+        </div>
+        <div id="reasonsGrid" class="reasons-grid"></div>
+      </section>
+
+      <!-- WISHES -->
+      <section class="wish-section scene-block">
+        <div class="wish-card glass-card reveal-up">
+          <div class="lily-mark" aria-hidden="true"></div>
+          <span class="mini-overline">bu masalın dileği</span>
+          <h2>Sen gülünce dünya biraz daha aydınlık oluyor.</h2>
+          <p>
+            Bazen bir bakışın, bazen sesin, bazen de sadece yanımda olduğunu bilmek...
+            Hepsi bana “iyi ki” dedirtiyor. Bu site, sana söylemek istediğim şeylerin
+            küçük bir kısmı sadece.
+          </p>
+        </div>
+      </section>
+
+      <!-- FINAL -->
+      <section id="finalSection" class="final-section scene-block">
+        <div class="final-card reveal-up">
+          <span class="mini-overline">masalın finali değil, başlangıcı</span>
+          <h2>Will you stay with me forever?</h2>
+          <p>Çünkü ben bu masalı seninle okumaya devam etmek istiyorum.</p>
+          <div class="final-buttons">
+            <button class="forever-btn" data-answer="yes">Yes 💜</button>
+            <button class="forever-btn" data-answer="also-yes">Also Yes ✨</button>
+          </div>
+          <p id="foreverMessage" class="forever-message" aria-live="polite"></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <template id="lanternTemplate">
+    <div class="lantern">
+      <div class="lantern-cap"></div>
+      <div class="lantern-body">
+        <span class="lantern-core"></span>
+      </div>
+      <div class="lantern-tail"></div>
+    </div>
+  </template>
+
+  <template id="polaroidTemplate">
+    <article class="polaroid scrapbook-polaroid reveal-polaroid">
+      <span class="polaroid-tape" aria-hidden="true"></span>
+      <div class="photo-wrap">
+        <img alt="Ayşe ve Kerem anısı" loading="lazy" />
+        <div class="photo-placeholder">
+          <span>Fotoğraf</span>
+        </div>
+      </div>
+      <p></p>
+    </article>
+  </template>
+
+  <template id="reasonTemplate">
+    <article class="reason-card reveal-up">
+      <span class="reason-number"></span>
+      <p></p>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
