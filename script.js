@@ -429,7 +429,7 @@ function openEnvelope() {
   state.letterOpened = true;
   dom.envelope.classList.add("open");
   playEnvelopeSound();
-  typeLetter(LETTER_TEXT, dom.typedLetter, 24);
+  typeLetter(LETTER_TEXT, dom.typedLetter, 31);
 }
 
 function bindMusic() {
