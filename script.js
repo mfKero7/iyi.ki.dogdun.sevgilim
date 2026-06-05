@@ -34,9 +34,9 @@ const LETTER_TEXT = `Bir zamanlar yüksek bir kulede değil, kalbimin en güzel 
 Gülüşü karanlık gecede yükselen fenerler gibiydi; sessizce ama bütün gökyüzünü değiştirecek kadar güçlü.
 
 Sen hayatıma geldiğinden beri her sıradan gün biraz daha masala benzedi. Bazen bir mesajın, bazen bir bakışın, bazen de sadece varlığın bana iyi geliyor.
-
 Bu sayfadaki her fener, seni düşününce içimde yanan küçük bir ışık. Her zambak, sana duyduğum temiz ve güzel sevginin küçük bir işareti.
-İyi ki varsın Sevgilim. İyi ki benim masalıma geldin.`;
+
+İyi ki varsın Sevgilim. İyi ki benim masalıma sen geldin🩵`;
 
 const PHOTO_NOTES = [
   "En özel karemiz",
