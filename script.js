@@ -59,7 +59,7 @@ const PHOTO_LONG_NOTES = [
       "Hep böyle birlikte yan yana olalım.",
       "En kötü günümüz bugünkü gibi olsun.",
       "Sen benim için çok değerlisin SENİ ÇOK SEVİYORUM🩷."
-              "İyi ki varsın sevgilim.",
+              "İyi ki varsın sevgilim."
     ]
   },
   {
