@@ -4035,7 +4035,7 @@ code {
 
 .paper {
   height: auto !important;
-  min-height: 640px !important;
+  min-height: 590px !important;
   padding-bottom: 2rem !important;
   overflow: visible !important;
   border-radius: 1.2rem 1.2rem 2rem 2rem !important;
@@ -4059,7 +4059,7 @@ code {
 }
 
 .paper-inner {
-  min-height: 575px !important;
+  min-height: 525px !important;
   padding-bottom: 3rem !important;
   border-radius: 1rem 1rem 1.5rem 1.5rem !important;
 }
