@@ -4067,3 +4067,55 @@ code {
 .typed-letter {
   padding-bottom: 2rem !important;
 }
+
+/* MEKTUP KAĞIDI DÜZELTME - EN ALTA KOY */
+#letterSection {
+  min-height: 1150px !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding-bottom: 12rem !important;
+}
+
+#letterSection .envelope-stage {
+  min-height: 980px !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding-top: 10rem !important;
+}
+
+#letterSection .envelope {
+  overflow: visible !important;
+}
+
+#letterSection .paper {
+  min-height: 760px !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding-bottom: 3rem !important;
+  border-radius: 1.4rem 1.4rem 2rem 2rem !important;
+}
+
+#letterSection .paper-inner {
+  min-height: 700px !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding-bottom: 4rem !important;
+  border-radius: 1rem 1rem 1.6rem 1.6rem !important;
+}
+
+#letterSection .paper::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -34px !important;
+  height: 60px !important;
+  background: linear-gradient(180deg, #ffeec4, #f3d89d) !important;
+  border-radius: 0 0 2rem 2rem !important;
+  box-shadow: 0 24px 36px rgba(40, 15, 55, 0.18) !important;
+  z-index: -1 !important;
+}
