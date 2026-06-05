@@ -4015,3 +4015,55 @@ code {
 .board-soft-glow {
   pointer-events: none !important;
 }
+/* Mektup kağıdının küt bitmesini düzeltir */
+.letter-section {
+  min-height: auto !important;
+  padding-bottom: 8rem !important;
+  overflow: visible !important;
+}
+
+.envelope-stage {
+  min-height: 850px !important;
+  align-items: start !important;
+  padding-top: 7rem !important;
+  overflow: visible !important;
+}
+
+.envelope {
+  overflow: visible !important;
+}
+
+.paper {
+  height: auto !important;
+  min-height: 720px !important;
+  padding-bottom: 2rem !important;
+  overflow: visible !important;
+  border-radius: 1.2rem 1.2rem 2rem 2rem !important;
+}
+
+.envelope.open .paper {
+  transform: translateY(-142px) scale(1) !important;
+}
+
+.paper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -26px;
+  height: 48px;
+  background: linear-gradient(180deg, #ffeec4, #f7dfaa);
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 22px 32px rgba(40, 15, 55, 0.18);
+  z-index: -1;
+}
+
+.paper-inner {
+  min-height: 660px !important;
+  padding-bottom: 3rem !important;
+  border-radius: 1rem 1rem 1.5rem 1.5rem !important;
+}
+
+.typed-letter {
+  padding-bottom: 2rem !important;
+}
