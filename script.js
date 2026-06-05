@@ -31,13 +31,12 @@ const CONFIG = {
 
 const LETTER_TEXT = `Bir zamanlar yüksek bir kulede değil, kalbimin en güzel yerinde yaşayan bir prenses vardı...
 
-Onun adı Ayşe'ydi. Gülüşü karanlık gecede yükselen fenerler gibiydi; sessizce ama bütün gökyüzünü değiştirecek kadar güçlüydü.
+Gülüşü karanlık gecede yükselen fenerler gibiydi; sessizce ama bütün gökyüzünü değiştirecek kadar güçlü.
 
 Sen hayatıma geldiğinden beri her sıradan gün biraz daha masala benzedi. Bazen bir mesajın, bazen bir bakışın, bazen de sadece varlığın bana iyi geliyor.
 
 Bu sayfadaki her fener, seni düşününce içimde yanan küçük bir ışık. Her zambak, sana duyduğum temiz ve güzel sevginin küçük bir işareti.
-
-İyi ki varsın Ayşe. İyi ki benim masalıma geldin.`;
+İyi ki varsın Sevgilim. İyi ki benim masalıma geldin.`;
 
 const PHOTO_NOTES = [
   "En özel karemiz",
@@ -54,12 +53,13 @@ const PHOTO_NOTES = [
 
 const PHOTO_LONG_NOTES = [
   {
-    title: "Bu kareye her baktığımda",
+    title: "Doğum Günün Kutlu Olsun Sevgilim",
     lines: [
-      "Senin gülüşün aklıma geliyor.",
-      "O anın içindeki küçük heyecanı tekrar yaşıyorum.",
-      "Sanki bütün dünya biraz daha yumuşak oluyor.",
-      "İyi ki bu fotoğraf bizim anılarımızdan biri."
+      "Seninle birlikte geçirdiğimiz anlar çok değerli.",
+      "Hep böyle birlikte yan yana olalım.",
+      "En kötü günümüz bugünkü gibi olsun.",
+      "Sen benim için çok değerlisin SENİ ÇOK SEVİYORUM🩷."
+              "İyi ki varsın sevgilim.",
     ]
   },
   {
