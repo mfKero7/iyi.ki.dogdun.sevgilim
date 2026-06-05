@@ -588,12 +588,33 @@ function typeLetter(text, target, speed = 26) {
   target.textContent = "";
   let index = 0;
 
+  const paper = target.closest(".paper");
+
+  const START_HEIGHT = 360;
+  const END_HEIGHT = 650;
+
+  if (paper) {
+    paper.style.setProperty("--paper-height", `${START_HEIGHT}px`);
+  }
+
   const timer = window.setInterval(() => {
+    if (index >= text.length) {
+      window.clearInterval(timer);
+
+      if (paper) {
+        paper.style.setProperty("--paper-height", `${END_HEIGHT}px`);
+      }
+
+      return;
+    }
+
     target.textContent += text[index];
     index += 1;
 
-    if (index >= text.length) {
-      window.clearInterval(timer);
+    if (paper) {
+      const progress = index / text.length;
+      const currentHeight = START_HEIGHT + (END_HEIGHT - START_HEIGHT) * progress;
+      paper.style.setProperty("--paper-height", `${currentHeight}px`);
     }
   }, speed);
 }
